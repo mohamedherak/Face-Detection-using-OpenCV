@@ -11,11 +11,9 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 #First detect face and then look for eyes inside the face.
 #Multiscale refers to detecting objects (faces) at multiple scales. 
 faces = face_cascade.detectMultiScale(gray, 1.3, 5) #scaleFactor = 1.3, minNeighbors = 3
-#Above faces returns a list of rectangles. For Obama image we only have 1 face
+#Above faces returns a list of rectangles. 
 #so it return a tuplr of (1,4) --> 1 represents one rectangle and 4 represents
 #the x,y,w,h values that define the square.
-
-#Obamas image with both barack and Michelle it returns a tuple of (2,4) --> 2 faces.
 
 #For each detected face now detect eyes. 
 #For emotion detection this is where we update code to identify facial emotion
